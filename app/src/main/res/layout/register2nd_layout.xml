@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Register2ndActivity"
+    android:background="@drawable/ic_background"
+    android:padding="30dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:id="@+id/img_signup_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:padding="5dp"
+            android:onClick="backFromRegister2nd"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/txt_signup2nd_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/muli_black"
+                android:text="@string/create_acc"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="35sp" />
+
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giới tính"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                />
+
+            <RadioGroup
+                android:id="@+id/rg_signup_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+
+                <RadioButton
+                    android:id="@+id/rd_signup_male"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nam"
+                    android:layout_marginEnd="10dp"/>
+
+                <RadioButton
+                    android:id="@+id/rd_signup_female"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nữ"
+                    android:layout_marginEnd="10dp"/>
+
+                <RadioButton
+                    android:id="@+id/rd_signup_other"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Khác" />
+            </RadioGroup>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:background="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ngày sinh"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                />
+            <DatePicker
+                android:id="@+id/dt_signup_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:spinnersShown="true"
+
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_signup_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_button_style"
+            android:elevation="5dp"
+            android:text="@string/create_acc"
+            app:backgroundTint="@color/colorPrimary" />
+    </LinearLayout>
+
+</ScrollView>

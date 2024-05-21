@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable-v24/ic_baseline_arrow_back_24.xml" value="0.253" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable-v24/ic_baseline_email_24.xml" value="0.2485" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable-v24/ic_baseline_local_phone_24.xml" value="0.2485" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable-v24/ic_baseline_lock_24.xml" value="0.253" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable-v24/ic_baseline_person_24.xml" value="0.253" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable/ic_background.xml" value="0.253" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable/ic_baseline_create_pencil.xml" value="0.2485" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable/round_style.xml" value="0.253" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/font/banger.xml" value="0.2833333333333333" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/font/muli.xml" value="0.2833333333333333" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/font/muli_black.xml" value="0.494140625" />
@@ -10,6 +18,9 @@
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/content_main.xml" value="0.22826086956521738" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/fragment_first.xml" value="0.25" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/login_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/register2nd_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/register_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/welcom_layout.xml" value="0.253125" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/welcome_layout.xml" value="0.25" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/menu/menu_main.xml" value="0.25416666666666665" />

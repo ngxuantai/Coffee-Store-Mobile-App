@@ -18,34 +18,33 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.welcome_layout);
 
     }
-    //chuyển sang trang đăng nhập
+
     public void callLoginFromWel(View view)
     {
-//        Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
-
+        Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
         Pair[] pairs = new Pair[1];
         pairs[0] = new Pair<View, String>(findViewById(R.id.btn_login),"transition_login");
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(WelcomeActivity.this,pairs);
-//            startActivity(intent,options.toBundle());
+            startActivity(intent,options.toBundle());
         }
         else {
-//            startActivity(intent);
+            startActivity(intent);
         }
     }
-    // chuyển sang trang đăng ký
+
     public void callSignUpFromWel(View view)
     {
-//        Intent intent = new Intent(getApplicationContext(),RegisterActivity.class);
+        Intent intent = new Intent(getApplicationContext(),RegisterActivity.class);
         Pair[] pairs = new Pair[1];
         pairs[0] = new Pair<View, String>(findViewById(R.id.btn_signup),"transition_signup");
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(WelcomeActivity.this,pairs);
-//            startActivity(intent,options.toBundle());
+            startActivity(intent,options.toBundle());
         }
         else {
-//            startActivity(intent);
+            startActivity(intent);
         }
     }
 }
