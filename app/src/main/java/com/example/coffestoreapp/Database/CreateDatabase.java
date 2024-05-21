@@ -8,8 +8,8 @@ public class CreateDatabase extends SQLiteOpenHelper {
         public static String TABLE_EMPLOYEE = "Employee";
         public static String TABLE_DRINK = "Drink";
         public static String TABLE_CATEGORY = "Category";
-        public static String TABLE_TABLE = "Table";
-        public static String TABLE_ORDER = "Order";
+        public static String TABLE_TABLES = "Tables";
+        public static String TABLE_ORDERS = "Orders";
         public static String TABLE_ORDER_DETAIL = "OrderDetail";
         public static String TABLE_ROLE = "Role";
 
@@ -75,7 +75,7 @@ public class CreateDatabase extends SQLiteOpenHelper {
                 String tblRole = "CREATE TABLE " + TABLE_ROLE + " ( " + ROLE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                                 + ROLE_NAME + " TEXT)";
 
-                String tblTable = "CREATE TABLE " + TABLE_TABLE + " ( " + TABLE_ID
+                String tblTable = "CREATE TABLE " + TABLE_TABLES + " ( " + TABLE_ID
                                 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                                 + TABLE_NAME + " TEXT, " + TABLE_STATUS + " TEXT )";
 
@@ -87,7 +87,7 @@ public class CreateDatabase extends SQLiteOpenHelper {
                                 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                                 + CATEGORY_IMAGE + " BLOB, " + CATEGORY_NAME + " TEXT)";
 
-                String tblOrder = "CREATE TABLE " + TABLE_ORDER + " ( " + ORDER_ID
+                String tblOrder = "CREATE TABLE " + TABLE_ORDERS + " ( " + ORDER_ID
                                 + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                                 + ORDER_TABLE_ID + " INTEGER, " + ORDER_EMPLOYEE_ID + " INTEGER, " + ORDER_DATE
                                 + " TEXT, "
