@@ -41,7 +41,7 @@
         android:padding="15dp"
         >
         <TextView
-            android:id="@+id/txt_payment_TenBan"
+            android:id="@+id/txt_payment_TableName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bàn 1"
@@ -55,7 +55,7 @@
             />
 
         <TextView
-            android:id="@+id/txt_payment_NgayDat"
+            android:id="@+id/txt_payment_OrderDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20/12/2021"
@@ -125,7 +125,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_payment_ThanhToan"
+            android:id="@+id/btn_payment_Pay"
             android:layout_centerVertical="true"
             android:layout_width="100dp"
             android:padding="10dp"

@@ -43,10 +43,10 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
         //region view properties
         gvDisplayPayment= (GridView)findViewById(R.id.gvDisplayPayment);
         IMG_payment_backbtn = (ImageView)findViewById(R.id.img_payment_backbtn);
-        TXT_payment_tableName = (TextView)findViewById(R.id.txt_payment_TenBan);
-        TXT_payment_orderDate = (TextView)findViewById(R.id.txt_payment_NgayDat);
+        TXT_payment_tableName = (TextView)findViewById(R.id.txt_payment_TableName);
+        TXT_payment_orderDate = (TextView)findViewById(R.id.txt_payment_OrderDate);
         TXT_payment_total = (TextView)findViewById(R.id.txt_payment_TongTien);
-        BTN_payment_Pay = (Button)findViewById(R.id.btn_payment_ThanhToan);
+        BTN_payment_Pay = (Button)findViewById(R.id.btn_payment_Pay);
         //endregion
 
         //khởi tạo kết nối csdl
@@ -57,9 +57,6 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
         fragmentManager = getSupportFragmentManager();
 
         //lấy data từ mã bàn đc chọn
-        //Todo: change maban to tableId
-        //Todo: change tenban to table name
-        //Todo: change ngaydat to order date
         Intent intent = getIntent();
         tableId = intent.getIntExtra("tableid",0);
         String tablename = intent.getStringExtra("tablename");
@@ -89,7 +86,7 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         int id = v.getId();
         switch (id){
-            case R.id.btn_payment_ThanhToan:
+            case R.id.btn_payment_Pay:
                 boolean tableCheck = tableDAO.updateStatusTableById(tableId,"false");
                 boolean orderCheck = orderDAO.UpdateOrderStatusByTableId(tableId,"true");
                 boolean totalCheck = orderDAO.UpdateOrderTotal(orderId,String.valueOf(total));
