@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lightwhite"
+    android:padding="20dp"
+    android:layout_margin="20dp">
+    <TextView
+        android:id="@+id/txt_customtable_tableName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        />
+    <ImageView
+        android:id="@+id/img_customtable_table"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_baseline_event_seat_40"
+        android:layout_below="@+id/txt_customtable_tableName"
+        android:background="@color/colorPrimary"
+        />
+    <ImageView
+        android:id="@+id/img_customtable_callOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_fastfood_24"
+        android:background="@drawable/border_radius"
+        android:padding="5dp"
+        android:layout_below="@id/img_customtable_table"
+        android:layout_marginLeft="6dp"
+        android:visibility="invisible"
+        />
+    <ImageView
+        android:id="@+id/img_customtable_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_payments_24"
+        android:background="@drawable/border_radius"
+
+        android:padding="5dp"
+        android:layout_below="@id/img_customtable_table"
+        android:layout_toRightOf="@id/img_customtable_callOrder"
+        android:layout_marginLeft="12dp"
+        android:visibility="invisible"
+        />
+    <ImageView
+        android:id="@+id/img_customtable_pressButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_backspace_24"
+        android:background="@drawable/border_radius"
+        android:padding="5dp"
+        android:layout_below="@id/img_customtable_table"
+        android:layout_toRightOf="@id/img_customtable_pay"
+        android:layout_marginLeft="12dp"
+        android:visibility="invisible"
+
+        />
+
+
+
+</RelativeLayout>
