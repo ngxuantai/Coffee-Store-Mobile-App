@@ -7,6 +7,9 @@
     <string name="remember_pass">Lưu mật khẩu</string>
     <string name="forgot_pass">Quên mật khẩu</string>
     <string name="create_account">Tạo tài khoản mới</string>
+    <!-- home & menu -->
+    <string name="add_sucessful">Thêm thành công!</string>
+    <string name="add_failed">Thêm thất bại!</string>
     <!-- register -->
     <string name="register_button_text">Đăng ký</string>
     <string name="create_acc">Tạo tài khoản mới</string>
