@@ -27,4 +27,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorControlHighlight">@color/colorAccent</item>
     </style>
+    <!-- Popup style -->
+    <style name="PopUpActivity" parent="Theme.MaterialComponents.Light.Dialog">
+    </style>
 </resources>

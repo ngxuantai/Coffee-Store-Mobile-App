@@ -27,6 +27,16 @@
         <activity android:name=".Activities.RegisterActivity" />
         <activity android:name=".Activities.Register2ndActivity" />
         <activity android:name=".Activities.HomeActivity" />
+        <activity android:name=".Activities.PaymentActivity" />
+        <activity
+            android:name=".Activities.AddTableActivity"
+            android:label="@string/addTable"
+            android:theme="@style/PopUpActivity" />
+        <activity
+            android:name=".Activities.EditTableActivity"
+            android:label="Sửa bàn ăn"
+            android:theme="@style/PopUpActivity" />
+
     </application>
 
 </manifest>
