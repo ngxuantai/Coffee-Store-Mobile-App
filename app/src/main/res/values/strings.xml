@@ -7,6 +7,16 @@
     <string name="remember_pass">Lưu mật khẩu</string>
     <string name="forgot_pass">Quên mật khẩu</string>
     <string name="create_account">Tạo tài khoản mới</string>
+    <!-- button , status , ... -->
+    <string name="edit_sucessful">Sửa thành công!</string>
+    <string name="edit_failed">Lỗi khi sửa!</string>
+    <string name="delete_sucessful">Xóa thành công!</string>
+    <string name="delete_failed">Lỗi khi xóa!</string>
+    <string name="addTable">Thêm bàn ăn</string>
+    <string name="addMenu">Thêm thực đơn</string>
+    <string name="addCategory">Thêm loại</string>
+    <string name="add_sucessful">Thêm thành công!</string>
+    <string name="add_failed">Thêm thất bại!</string>
     <!-- register -->
     <string name="register_button_text">Đăng ký</string>
     <string name="create_acc">Tạo tài khoản mới</string>

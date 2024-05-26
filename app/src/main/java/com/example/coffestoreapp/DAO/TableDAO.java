@@ -54,7 +54,7 @@ public class TableDAO {
         }
     }
 
-    public List<TableDTO> LayTatCaBanAn() {
+    public List<TableDTO> GetAllTables() {
         List<TableDTO> tableDTOList = new ArrayList<TableDTO>();
         String query = "SELECT * FROM " + CreateDatabase.TABLE_TABLES;
         Cursor cursor = database.rawQuery(query, null);
