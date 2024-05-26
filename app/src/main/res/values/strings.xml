@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Coffe Store App</string>
+    <string name="app_name">Coffee Store App</string>
     <!-- login -->
     <string name="login_text">Đăng nhập</string>
     <string name="username">Tên đăng nhập</string>

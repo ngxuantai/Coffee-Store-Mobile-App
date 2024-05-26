@@ -21,7 +21,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.fragment.app.Fragment;
 
 import com.example.coffestoreapp.Activities.AddTableActivity;
-import com.example.coffestoreapp.Activities.CustomAdapter.AdapterDisplayTable;
+import com.example.coffestoreapp.CustomAdapter.AdapterDisplayTable;
 import com.example.coffestoreapp.Activities.EditTableActivity;
 //Todo: add home activity
 import com.example.coffestoreapp.Activities.HomeActivity;

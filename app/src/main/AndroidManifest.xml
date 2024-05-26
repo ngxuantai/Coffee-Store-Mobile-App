@@ -27,6 +27,8 @@
         <activity android:name=".Activities.RegisterActivity" />
         <activity android:name=".Activities.Register2ndActivity" />
         <activity android:name=".Activities.HomeActivity" />
+        <activity android:name=".Activities.AddTableActivity" />
+        <activity android:name=".Activities.EditTableActivity" />
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.coffestoreapp.Activities.CustomAdapter;
+package com.example.coffestoreapp.CustomAdapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -21,7 +21,7 @@ import com.example.coffestoreapp.DAO.OrderDAO;
 import com.example.coffestoreapp.DTO.OrderDTO;
 import com.example.coffestoreapp.DTO.TableDTO;
 //Todo: add fragment displaycategory
-import com.example.coffestoreapp.Fragments.DisplayCategoryFragment;
+//import com.example.coffestoreapp.Fragments.DisplayCategoryFragment;
 import com.example.coffestoreapp.R;
 
 import java.text.SimpleDateFormat;
@@ -158,13 +158,13 @@ public class AdapterDisplayTable extends BaseAdapter implements View.OnClickList
                 //chuyển qua trang catEditTableActivityegory
                 //Todo: add displaytable fragment
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                DisplayCategoryFragment displayCategoryFragment = new DisplayCategoryFragment();
+//                DisplayCategoryFragment displayCategoryFragment = new DisplayCategoryFragment();
 
                 Bundle bDataCategory = new Bundle();
                 bDataCategory.putInt("tableid",tableID);
-                displayCategoryFragment.setArguments(bDataCategory);
+//                displayCategoryFragment.setArguments(bDataCategory);
                 //Todo: add home , change hienthibanan to displaytable depending on the fragment
-                transaction.replace(R.id.contentView,displayCategoryFragment).addToBackStack("hienthibanan");
+//                transaction.replace(R.id.contentView,displayCategoryFragment).addToBackStack("hienthibanan");
                 transaction.commit();
                 break;
 

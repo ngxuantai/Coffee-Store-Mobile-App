@@ -1,4 +1,4 @@
-package com.example.coffestoreapp.Activities.CustomAdapter;
+package com.example.coffestoreapp.CustomAdapter;
 
 import android.content.Context;
 import android.graphics.Bitmap;
