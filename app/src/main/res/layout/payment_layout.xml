@@ -5,20 +5,23 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Activities.PaymentActivity">
+    tools:context=".Activities.PaymentActivity"
+    android:background="#F5F5F5">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
-        >
+        android:elevation="4dp"
+        android:padding="10dp">
+
         <ImageView
             android:id="@+id/img_payment_backbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:src="@drawable/ic_baseline_arrow_back_24"
             android:layout_centerVertical="true"
-            />
+            android:contentDescription="Back" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -26,81 +29,77 @@
             android:text="Thanh toán"
             android:textSize="24sp"
             android:fontFamily="@font/muli_black"
-            android:padding="10dp"
             android:textAllCaps="true"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/img_payment_backbtn"
-            />
-
+            android:layout_toEndOf="@id/img_payment_backbtn"
+            android:layout_marginStart="10dp" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        >
+        android:background="@drawable/corner_border_white"
+        android:layout_margin="10dp"
+        android:elevation="2dp">
+
         <TextView
-            android:id="@+id/txt_payment_TableName"
+            android:id="@+id/txt_payment_TenBan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bàn 1"
             android:textSize="20sp"
             android:fontFamily="@font/muli_black"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+            android:padding="10dp"
             android:textColor="@color/white"
-            android:layout_centerVertical="true"
-            android:background="@drawable/corner_border_black"
-            />
+            android:background="@drawable/corner_border_primary"  />
 
         <TextView
-            android:id="@+id/txt_payment_OrderDate"
+            android:id="@+id/txt_payment_NgayDat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20/12/2021"
-            android:textSize="20sp"
-            android:fontFamily="@font/muli_black"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/muli"
+            android:padding="10dp"
             android:textColor="@color/white"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/corner_border_black"
-            />
-
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/corner_border_primary"  />
     </RelativeLayout>
 
-    <GridView
-        android:id="@+id/gvDisplayPayment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:numColumns="1"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:paddingVertical="5dp"
-        >
 
-    </GridView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp">
+
+        <GridView
+            android:id="@+id/gvDisplayPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="1"
+            android:horizontalSpacing="5dp"
+            android:verticalSpacing="5dp" />
+    </ScrollView>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"
-        android:background="@drawable/corner_border_black"
-        android:layout_margin="5dp"
-        android:elevation="10dp"
-        >
+        android:background="@drawable/corner_border_primary"
+        android:layout_margin="10dp"
+        android:elevation="10dp">
 
         <LinearLayout
             android:id="@+id/linearl_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="5dp"
-            >
+            android:layout_centerVertical="true">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -108,8 +107,8 @@
                 android:textColor="@color/white"
                 android:fontFamily="@font/muli"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/txt_payment_TongTien"
                 android:layout_width="wrap_content"
@@ -119,23 +118,20 @@
                 android:textColor="@color/white"
                 android:fontFamily="@font/muli_black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                />
-
+                android:textStyle="bold" />
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_payment_Pay"
-            android:layout_centerVertical="true"
-            android:layout_width="100dp"
-            android:padding="10dp"
+            android:id="@+id/btn_payment_ThanhToan"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/corner_border_primary"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:background="@drawable/corner_border_white"
             android:text="Thanh toán"
             android:textSize="20sp"
             android:fontFamily="@font/muli_black"
-            />
-
+            android:textColor="@color/colorPrimary" />
     </RelativeLayout>
 </LinearLayout>
