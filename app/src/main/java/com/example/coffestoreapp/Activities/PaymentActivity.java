@@ -12,7 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
-import com.example.coffestoreapp.Activities.CustomAdapter.AdapterDisplayPayment;
+import com.example.coffestoreapp.CustomAdapter.AdapterDisplayPayment;
 import com.example.coffestoreapp.DAO.TableDAO;
 import com.example.coffestoreapp.DAO.OrderDAO;
 import com.example.coffestoreapp.DAO.PaymentDAO;

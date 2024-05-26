@@ -50,10 +50,10 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putInt("maquyen",maquyen);
                     editor.commit();
 
-                    //Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
-                    //intent.putExtra("tendn",TXTL_login_TenDN.getEditText().getText().toString());
-                    //intent.putExtra("manv",ktra);
-                    //startActivity(intent);
+                    Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
+                    intent.putExtra("userName",TXTL_login_userName.getEditText().getText().toString());
+                    intent.putExtra("manv",ktra);
+                    startActivity(intent);
                 }else {
                     Toast.makeText(getApplicationContext(),"Đăng nhập thất bại!",Toast.LENGTH_SHORT).show();
                 }

@@ -25,7 +25,7 @@ import android.widget.Toast;
 import com.example.coffestoreapp.Fragments.DisplayHomeFragment;
 //import com.example.coffestoreapp.Fragments.DisplayStaffFragment;
 //import com.example.coffestoreapp.Fragments.DisplayStatisticFragment;
-//import com.example.coffestoreapp.Fragments.DisplayTableFragment;
+import com.example.coffestoreapp.Fragments.DisplayTableFragment;
 import com.example.coffestoreapp.R;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
@@ -36,7 +36,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     Toolbar toolbar;
     FragmentManager fragmentManager;
-    TextView TXT_menu_employeeName;
+    TextView TXT_menu_userName;
     int accessId = 0;
     SharedPreferences sharedPreferences;
 
@@ -60,7 +60,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         navigationView = (NavigationView)findViewById(R.id.navigation_view_home);
         toolbar = (androidx.appcompat.widget.Toolbar)findViewById(R.id.toolbar);
         View view = navigationView.getHeaderView(0);
-        TXT_menu_employeeName = (TextView) view. findViewById(R.id.txt_menu_employeeName);
+        TXT_menu_userName = (TextView) view. findViewById(R.id.txt_menu_userName);
 
 
         setSupportActionBar(toolbar); // tao toolbar
@@ -83,8 +83,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         //Tụ động gán tên nv đăng nhập qua Extras
         Intent intent = getIntent();
-        String username = intent.getStringExtra("tendn");
-        TXT_menu_employeeName.setText("Xin chào " + username + " !!");
+        String userName = intent.getStringExtra("userName");
+        TXT_menu_userName.setText("Xin chào " + userName + " !!");
 
         //lấy file share prefer
         sharedPreferences = getSharedPreferences("luuquyen", Context.MODE_PRIVATE);
@@ -124,12 +124,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.nav_table:
-//                FragmentTransaction tranDisplayTable = fragmentManager.beginTransaction();
-//                //DisplayTableFragment displayTableFragment = new DisplayTableFragment();
-//                tranDisplayTable.replace(R.id.contentView,displayTableFragment);
-//                tranDisplayTable.commit();
-//                navigationView.setCheckedItem(item.getItemId());
-//                drawerLayout.closeDrawers();
+                FragmentTransaction tranDisplayTable = fragmentManager.beginTransaction();
+                DisplayTableFragment displayTableFragment = new DisplayTableFragment();
+                tranDisplayTable.replace(R.id.contentView,displayTableFragment);
+                tranDisplayTable.commit();
+                navigationView.setCheckedItem(item.getItemId());
+                drawerLayout.closeDrawers();
 
                 break;
 

@@ -36,7 +36,7 @@
             android:name=".Activities.EditTableActivity"
             android:label="Sửa bàn ăn"
             android:theme="@style/PopUpActivity" />
-
+      
     </application>
 
 </manifest>
