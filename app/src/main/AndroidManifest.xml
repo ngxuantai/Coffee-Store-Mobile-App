@@ -20,7 +20,8 @@
         <activity android:name=".Activities.LoginActivity"></activity>
         <activity android:name=".Activities.RegisterActivity"></activity>
         <activity android:name=".Activities.Register2ndActivity"></activity>
-
+        <activity android:name=".Activities.DetailStatisticActivity"></activity>
+        <activity android:name=".Activities.AddStaffActivity" />
     </application>
 
 </manifest>
