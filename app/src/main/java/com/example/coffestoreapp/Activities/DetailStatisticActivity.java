@@ -42,8 +42,8 @@ public class DetailStatisticActivity extends AppCompatActivity {
         orderId = intent.getIntExtra("orderid",0);
         employeeId = intent.getIntExtra("employeeid",0);
         tableId = intent.getIntExtra("tableid",0);
-        orderDate = intent.getStringExtra("ngaydat");
-        totalAmount = intent.getStringExtra("tongtien");
+        orderDate = intent.getStringExtra("orderdate");
+        totalAmount = intent.getStringExtra("totalamount");
 
         //region Thuộc tính bên view
         img_detailstatistic_backbtn = (ImageView)findViewById(R.id.img_detailstatistic_backbtn);
