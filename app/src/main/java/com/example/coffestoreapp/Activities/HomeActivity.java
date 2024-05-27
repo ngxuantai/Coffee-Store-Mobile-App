@@ -21,7 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 //import com.example.coffestoreapp.CustomAdapter.ViewPagerAdapter;
-//import com.example.coffestoreapp.Fragments.DisplayCategoryFragment;
+import com.example.coffestoreapp.Fragments.DisplayCategoryFragment;
 import com.example.coffestoreapp.Fragments.DisplayHomeFragment;
 //import com.example.coffestoreapp.Fragments.DisplayStaffFragment;
 //import com.example.coffestoreapp.Fragments.DisplayStatisticFragment;
@@ -134,12 +134,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.nav_category:
-//                FragmentTransaction tranDisplayMenu = fragmentManager.beginTransaction();
-//                DisplayCategoryFragment displayCategoryFragment = new DisplayCategoryFragment();
-//                tranDisplayMenu.replace(R.id.contentView, displayCategoryFragment);
-//                tranDisplayMenu.commit();
-//                navigationView.setCheckedItem(item.getItemId());
-//                drawerLayout.closeDrawers();
+                FragmentTransaction tranDisplayMenu = fragmentManager.beginTransaction();
+                DisplayCategoryFragment displayCategoryFragment = new DisplayCategoryFragment();
+                tranDisplayMenu.replace(R.id.contentView, displayCategoryFragment);
+                tranDisplayMenu.commit();
+                navigationView.setCheckedItem(item.getItemId());
+                drawerLayout.closeDrawers();
 
                 break;
 
