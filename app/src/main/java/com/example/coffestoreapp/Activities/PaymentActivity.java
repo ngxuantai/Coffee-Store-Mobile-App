@@ -45,7 +45,7 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
         IMG_payment_backbtn = (ImageView)findViewById(R.id.img_payment_backbtn);
         TXT_payment_tableName = (TextView)findViewById(R.id.txt_payment_TableName);
         TXT_payment_orderDate = (TextView)findViewById(R.id.txt_payment_OrderDate);
-        TXT_payment_total = (TextView)findViewById(R.id.txt_payment_TongTien);
+        TXT_payment_total = (TextView)findViewById(R.id.txt_payment_Pay);
         BTN_payment_Pay = (Button)findViewById(R.id.btn_payment_Pay);
         //endregion
 
