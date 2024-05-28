@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
@@ -7,16 +8,25 @@
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable-v24/ic_baseline_local_phone_24.xml" value="0.2485" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable-v24/ic_baseline_lock_24.xml" value="0.253" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable-v24/ic_baseline_person_24.xml" value="0.253" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable-v24/round_corner_textview.xml" value="0.2485" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable/border_radius.xml" value="0.2485" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable/border_radius_light.xml" value="0.2485" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable/ic_background.xml" value="0.253" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable/ic_baseline_create_pencil.xml" value="0.2485" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable/round_button_style.xml" value="0.2485" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable/round_corner_categorytext.xml" value="0.2485" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/drawable/round_style.xml" value="0.253" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/font/banger.xml" value="0.2833333333333333" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/font/muli.xml" value="0.2833333333333333" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/font/muli_black.xml" value="0.494140625" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/about_layout.xml" value="0.22826086956521738" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/addmenu_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/amount_menu_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/content_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/custom_layout_displaymenu.xml" value="0.25416666666666665" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/displayhome_layout.xml" value="0.264" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/displaymenu_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/edittable_layout.xml" value="0.11302083333333333" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/fragment_first.xml" value="0.25" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/home_layout.xml" value="0.20425724637681159" />
@@ -31,7 +41,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

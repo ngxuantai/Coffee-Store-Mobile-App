@@ -35,5 +35,7 @@
     <string name="editcategory">Sửa <br /> loại</string>
     <string name="choseimg">Chọn hình</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <!-- menu -->
+    <string name="add_menu">Thêm đồ uống</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
