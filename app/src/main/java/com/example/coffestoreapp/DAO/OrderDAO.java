@@ -85,7 +85,7 @@ public class OrderDAO {
         return magoimon;
     }
 
-    public boolean UpdateTongTienDonDat(int orderId,String totalAmount){
+    public boolean UpdateOrderTotal(int orderId, String totalAmount){
         ContentValues contentValues = new ContentValues();
         contentValues.put(CreateDatabase.ORDER_TOTAL_AMOUNT,totalAmount);
         long check  = database.update(CreateDatabase.TABLE_ORDERS,contentValues,
@@ -97,7 +97,7 @@ public class OrderDAO {
         }
     }
 
-    public boolean UpdateTThaiDonTheoMaBan(int tableId,String status){
+    public boolean UpdateOrderStatusByTableId(int tableId, String status){
         ContentValues contentValues = new ContentValues();
         contentValues.put(CreateDatabase.ORDER_STATUS,status);
         long check = database.update(CreateDatabase.TABLE_ORDERS,contentValues,CreateDatabase.ORDER_TABLE_ID+
