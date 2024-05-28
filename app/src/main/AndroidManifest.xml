@@ -26,6 +26,8 @@
         <activity android:name=".Activities.LoginActivity" />
         <activity android:name=".Activities.RegisterActivity" />
         <activity android:name=".Activities.Register2ndActivity" />
+        <activity android:name=".Activities.DetailStatisticActivity" />
+        <activity android:name=".Activities.AddStaffActivity" />
         <activity android:name=".Activities.HomeActivity" />
         <activity android:name=".Activities.PaymentActivity" />
         <activity
