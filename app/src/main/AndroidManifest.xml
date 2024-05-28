@@ -15,7 +15,7 @@
             android:resource="@drawable/ic_baseline_person_pin_32" />
 
         <activity
-            android:name=".Activities.HomeActivity"
+            android:name=".Activities.WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +26,9 @@
         <activity android:name=".Activities.LoginActivity" />
         <activity android:name=".Activities.RegisterActivity" />
         <activity android:name=".Activities.Register2ndActivity" />
-<!--        <activity android:name=".Activities.HomeActivity" />-->
+        <activity android:name=".Activities.DetailStatisticActivity" />
+        <activity android:name=".Activities.AddStaffActivity" />
+        <activity android:name=".Activities.HomeActivity" />
         <activity android:name=".Activities.PaymentActivity" />
         <activity
             android:name=".Activities.AddTableActivity"
