@@ -42,17 +42,17 @@ public class LoginActivity extends AppCompatActivity {
 
                 String userName = TXTL_login_userName.getEditText().getText().toString();
                 String password = TXTL_login_password.getEditText().getText().toString();
-                int ktra = employeeDAO.checkAuth(userName, password);
-                int maquyen = employeeDAO.getRoleEmployee(ktra);
-                if(ktra != 0){
-                    SharedPreferences sharedPreferences = getSharedPreferences("luuquyen", Context.MODE_PRIVATE);
+                int check = employeeDAO.checkAuth(userName, password);
+                int roleId = employeeDAO.getRoleEmployee(check);
+                if(check != 0){
+                    SharedPreferences sharedPreferences = getSharedPreferences("roleSave", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor =sharedPreferences.edit();
-                    editor.putInt("maquyen",maquyen);
+                    editor.putInt("roleId",roleId);
                     editor.commit();
 
                     Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
                     intent.putExtra("userName",TXTL_login_userName.getEditText().getText().toString());
-                    intent.putExtra("manv",ktra);
+                    intent.putExtra("employeeId",check);
                     startActivity(intent);
                 }else {
                     Toast.makeText(getApplicationContext(),"Đăng nhập thất bại!",Toast.LENGTH_SHORT).show();

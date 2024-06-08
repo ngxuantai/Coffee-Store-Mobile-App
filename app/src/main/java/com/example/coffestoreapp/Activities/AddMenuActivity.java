@@ -85,8 +85,8 @@ public class AddMenuActivity extends AppCompatActivity implements View.OnClickLi
         // endregion
 
         Intent intent = getIntent();
-        categoryId = intent.getIntExtra("maLoai", -1);
-        categoryName = intent.getStringExtra("tenLoai");
+        categoryId = intent.getIntExtra("categoryId", -1);
+        categoryName = intent.getStringExtra("categoryName");
         drinkDAO = new DrinkDAO(this); // khởi tạo đối tượng dao kết nối csdl
         TXTL_addmenu_category.getEditText().setText(categoryName);
 
@@ -127,8 +127,8 @@ public class AddMenuActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        boolean ktra;
-        String chucnang;
+        boolean check;
+        String function;
         switch (id) {
             case R.id.img_addmenu_ThemHinh:
                 Intent iGetIMG = new Intent();
@@ -144,7 +144,7 @@ public class AddMenuActivity extends AppCompatActivity implements View.OnClickLi
                 break;
 
             case R.id.btn_addmenu_addDrink:
-                // ktra validation
+                // check validation
                 if (!validateImage() | !validateName() | !validatePrice()) {
                     return;
                 }
@@ -167,17 +167,17 @@ public class AddMenuActivity extends AppCompatActivity implements View.OnClickLi
                 drinkDTO.setStatus(status);
                 drinkDTO.setImage(imageViewtoByte(IMG_addmenu_addImage));
                 if (drinkId != 0) {
-                    ktra = drinkDAO.editDrink(drinkDTO, drinkId);
-                    chucnang = "suamon";
+                    check = drinkDAO.editDrink(drinkDTO, drinkId);
+                    function = "editDrink";
                 } else {
-                    ktra = drinkDAO.addDrink(drinkDTO);
-                    chucnang = "themmon";
+                    check = drinkDAO.addDrink(drinkDTO);
+                    function = "addDrink";
                 }
 
                 // Thêm, sửa món dựa theo obj loaimonDTO
                 Intent intent = new Intent();
-                intent.putExtra("ktra", ktra);
-                intent.putExtra("chucnang", chucnang);
+                intent.putExtra("check", check);
+                intent.putExtra("function", function);
                 setResult(RESULT_OK, intent);
                 finish();
 

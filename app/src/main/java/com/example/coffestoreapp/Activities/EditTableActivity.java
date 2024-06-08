@@ -27,7 +27,7 @@ public class EditTableActivity extends AppCompatActivity {
 
         //khởi tạo dao mở kết nối csdl
         tableDAO = new TableDAO(this);
-        int tableId = getIntent().getIntExtra("tableid",0); //lấy maban từ bàn đc chọn
+        int tableId = getIntent().getIntExtra("tableId",0); //lấy maban từ bàn đc chọn
 
         BTN_edittable_EditTable.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +38,7 @@ public class EditTableActivity extends AppCompatActivity {
                     boolean check = tableDAO.updateTableName(tableId,tableName);
                     Intent intent = new Intent();
                     //Todo: rename ketquasua if needed
-                    intent.putExtra("ketquasua",check);
+                    intent.putExtra("editResult",check);
                     setResult(RESULT_OK,intent);
                     finish();
                 }

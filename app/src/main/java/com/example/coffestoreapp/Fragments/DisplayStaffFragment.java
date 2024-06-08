@@ -44,10 +44,9 @@ public class DisplayStaffFragment extends Fragment {
                 public void onActivityResult(ActivityResult result) {
                     if(result.getResultCode() == Activity.RESULT_OK){
                         Intent intent = result.getData();
-                        //ketquaktra, chucnang, themnv la ten khoa de truy xuat du lieu nen em khong sua
-                        long check = intent.getLongExtra("ketquaktra",0);
-                        String feature = intent.getStringExtra("chucnang");
-                        if(feature.equals("themnv"))
+                        long check = intent.getLongExtra("check",0);
+                        String function = intent.getStringExtra("function");
+                        if(function.equals("addEmployee"))
                         {
                             if(check != 0){
                                 displayStaffList();
@@ -100,7 +99,7 @@ public class DisplayStaffFragment extends Fragment {
         switch (id){
             case R.id.itEdit:
                 Intent iEdit = new Intent(getActivity(),AddStaffActivity.class);
-                iEdit.putExtra("manv",employeeId);
+                iEdit.putExtra("employeeId",employeeId);
                 resultLauncherAdd.launch(iEdit);
                 break;
 

@@ -13,15 +13,13 @@ import android.widget.Toast;
 
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-//Todo: add home
 import com.example.coffestoreapp.Activities.HomeActivity;
 import com.example.coffestoreapp.Activities.PaymentActivity;
 import com.example.coffestoreapp.DAO.TableDAO;
 import com.example.coffestoreapp.DAO.OrderDAO;
 import com.example.coffestoreapp.DTO.OrderDTO;
 import com.example.coffestoreapp.DTO.TableDTO;
-//Todo: add fragment displaycategory
-//import com.example.coffestoreapp.Fragments.DisplayCategoryFragment;
+import com.example.coffestoreapp.Fragments.DisplayCategoryFragment;
 import com.example.coffestoreapp.R;
 
 import java.text.SimpleDateFormat;
@@ -139,7 +137,7 @@ public class AdapterDisplayTable extends BaseAdapter implements View.OnClickList
                 //Todo: add home activity
                 Intent getIHome = ((HomeActivity)context).getIntent();
                 //Todo: add home, change manv to employeeId
-                int employeeId = getIHome.getIntExtra("employeeid",0);
+                int employeeId = getIHome.getIntExtra("employeeId",0);
                 String status = tableDAO.getStatusTableById(tableID);
 
                 if(status.equals("false")){
@@ -158,22 +156,22 @@ public class AdapterDisplayTable extends BaseAdapter implements View.OnClickList
                 //chuyển qua trang catEditTableActivityegory
                 //Todo: add displaytable fragment
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-//                DisplayCategoryFragment displayCategoryFragment = new DisplayCategoryFragment();
+                DisplayCategoryFragment displayCategoryFragment = new DisplayCategoryFragment();
 
                 Bundle bDataCategory = new Bundle();
-                bDataCategory.putInt("tableid",tableID);
-//                displayCategoryFragment.setArguments(bDataCategory);
+                bDataCategory.putInt("tableId",tableID);
+                displayCategoryFragment.setArguments(bDataCategory);
                 //Todo: add home , change hienthibanan to displaytable depending on the fragment
-//                transaction.replace(R.id.contentView,displayCategoryFragment).addToBackStack("hienthibanan");
+                transaction.replace(R.id.contentView,displayCategoryFragment).addToBackStack("displayTable");
                 transaction.commit();
                 break;
 
             case R.id.img_customtable_pay:
                 //chuyển dữ liệu qua trang thanh toán
                 Intent iPayment = new Intent(context, PaymentActivity.class);
-                iPayment.putExtra("tableid",tableID);
-                iPayment.putExtra("tablename",tableName);
-                iPayment.putExtra("orderdate",orderdate);
+                iPayment.putExtra("tableId",tableID);
+                iPayment.putExtra("tableName",tableName);
+                iPayment.putExtra("orderDate",orderdate);
                 context.startActivity(iPayment);
                 break;
         }

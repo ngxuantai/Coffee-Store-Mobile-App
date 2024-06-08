@@ -58,12 +58,12 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
 
         //lấy data từ mã bàn đc chọn
         Intent intent = getIntent();
-        tableId = intent.getIntExtra("tableid",0);
-        String tablename = intent.getStringExtra("tablename");
-        String orderdate = intent.getStringExtra("orderdate");
+        tableId = intent.getIntExtra("tableId",0);
+        String tableName = intent.getStringExtra("tableName");
+        String orderDate = intent.getStringExtra("orderDate");
 
-        TXT_payment_tableName.setText(tablename);
-        TXT_payment_orderDate.setText(orderdate);
+        TXT_payment_tableName.setText(tableName);
+        TXT_payment_orderDate.setText(orderDate);
 
         //ktra mã bàn tồn tại thì hiển thị
         if(tableId !=0 ){

@@ -23,8 +23,8 @@ import android.widget.Toast;
 //import com.example.coffestoreapp.CustomAdapter.ViewPagerAdapter;
 import com.example.coffestoreapp.Fragments.DisplayCategoryFragment;
 import com.example.coffestoreapp.Fragments.DisplayHomeFragment;
-//import com.example.coffestoreapp.Fragments.DisplayStaffFragment;
-//import com.example.coffestoreapp.Fragments.DisplayStatisticFragment;
+import com.example.coffestoreapp.Fragments.DisplayStaffFragment;
+import com.example.coffestoreapp.Fragments.DisplayStatisticFragment;
 import com.example.coffestoreapp.Fragments.DisplayTableFragment;
 import com.example.coffestoreapp.R;
 import com.google.android.material.navigation.NavigationView;
@@ -87,8 +87,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         TXT_menu_userName.setText("Xin chào " + userName + " !!");
 
         //lấy file share prefer
-        sharedPreferences = getSharedPreferences("luuquyen", Context.MODE_PRIVATE);
-        accessId = sharedPreferences.getInt("maquyen", 0);
+        sharedPreferences = getSharedPreferences("roleSave", Context.MODE_PRIVATE);
+        accessId = sharedPreferences.getInt("roleId", 0);
 
         //hiện thị fragment home mặc định
         fragmentManager = getSupportFragmentManager();
@@ -115,8 +115,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.nav_statistic:
                 FragmentTransaction tranDisplayStatistic = fragmentManager.beginTransaction();
-                //DisplayStatisticFragment displayStatisticFragment = new DisplayStatisticFragment();
-                //tranDisplayStatistic.replace(R.id.contentView,displayStatisticFragment);
+                DisplayStatisticFragment displayStatisticFragment = new DisplayStatisticFragment();
+                tranDisplayStatistic.replace(R.id.contentView,displayStatisticFragment);
                 tranDisplayStatistic.commit();
                 navigationView.setCheckedItem(item.getItemId());
                 drawerLayout.closeDrawers();
@@ -144,16 +144,16 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.nav_staff:
-//                if(accessId == 1){
-//                    FragmentTransaction tranDisplayStaff = fragmentManager.beginTransaction();
-//                    //DisplayStaffFragment displayStaffFragment = new DisplayStaffFragment();
-//                    tranDisplayStaff.replace(R.id.contentView,displayStaffFragment);
-//                    tranDisplayStaff.commit();
-//                    navigationView.setCheckedItem(item.getItemId());
-//                    drawerLayout.closeDrawers();
-//                }else {
-//                    Toast.makeText(getApplicationContext(),"Bạn không có quyền truy cập",Toast.LENGTH_SHORT).show();
-//                }
+                if(accessId == 1){
+                    FragmentTransaction tranDisplayStaff = fragmentManager.beginTransaction();
+                    DisplayStaffFragment displayStaffFragment = new DisplayStaffFragment();
+                    tranDisplayStaff.replace(R.id.contentView,displayStaffFragment);
+                    tranDisplayStaff.commit();
+                    navigationView.setCheckedItem(item.getItemId());
+                    drawerLayout.closeDrawers();
+                } else {
+                    Toast.makeText(getApplicationContext(),"Bạn không có quyền truy cập",Toast.LENGTH_SHORT).show();
+                }
 
                 break;
 

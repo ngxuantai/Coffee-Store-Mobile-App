@@ -39,11 +39,11 @@ public class DetailStatisticActivity extends AppCompatActivity {
 
         //Lấy thông tin từ display statistic
         Intent intent = getIntent();
-        orderId = intent.getIntExtra("orderid",0);
-        employeeId = intent.getIntExtra("employeeid",0);
-        tableId = intent.getIntExtra("tableid",0);
-        orderDate = intent.getStringExtra("orderdate");
-        totalAmount = intent.getStringExtra("totalamount");
+        orderId = intent.getIntExtra("orderId",0);
+        employeeId = intent.getIntExtra("employeeId",0);
+        tableId = intent.getIntExtra("tableId",0);
+        orderDate = intent.getStringExtra("orderDate");
+        totalAmount = intent.getStringExtra("totalAmount");
 
         //region Thuộc tính bên view
         img_detailstatistic_backbtn = (ImageView)findViewById(R.id.img_detailstatistic_backbtn);

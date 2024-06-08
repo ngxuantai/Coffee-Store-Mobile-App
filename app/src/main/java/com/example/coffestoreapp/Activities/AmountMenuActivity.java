@@ -18,7 +18,7 @@ public class AmountMenuActivity extends AppCompatActivity {
 
     TextInputLayout TXTL_amountmenu_quantity;
     Button BTN_amountmenu_save;
-    int tabelId, drinkId;
+    int tableId, drinkId;
     OrderDAO orderDAO;
     OrderDetailDAO orderDetailDAO;
 
@@ -37,7 +37,7 @@ public class AmountMenuActivity extends AppCompatActivity {
 
         // Lấy thông tin từ bàn được chọn
         Intent intent = getIntent();
-        tabelId = intent.getIntExtra("tabelId", 0);
+        tableId = intent.getIntExtra("tableId", 0);
         drinkId = intent.getIntExtra("drinkId", 0);
 
         BTN_amountmenu_save.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +47,7 @@ public class AmountMenuActivity extends AppCompatActivity {
                     return;
                 }
 
-                int orderId = (int) orderDAO.getOrderIdByTableId(tabelId, "false");
+                int orderId = (int) orderDAO.getOrderIdByTableId(tableId, "false");
                 boolean ktra = orderDetailDAO.checkDrinkExist(orderId, drinkId);
                 if (ktra) {
                     // update số lượng món đã chọn

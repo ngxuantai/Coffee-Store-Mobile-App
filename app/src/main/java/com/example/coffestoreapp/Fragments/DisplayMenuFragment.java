@@ -33,8 +33,8 @@ import com.example.coffestoreapp.R;
 import java.util.List;
 
 public class DisplayMenuFragment extends Fragment {
-    int maloai, maban;
-    String tenloai, tinhtrang;
+    int categoryId, tableId;
+    String categoryName, status;
     GridView gvDisplayMenu;
     DrinkDAO drinkDAO;
     List<DrinkDTO> drinkDTOList;
@@ -47,18 +47,18 @@ public class DisplayMenuFragment extends Fragment {
                 public void onActivityResult(ActivityResult result) {
                     if (result.getResultCode() == Activity.RESULT_OK) {
                         Intent intent = result.getData();
-                        boolean ktra = intent.getBooleanExtra("ktra", false);
-                        String chucnang = intent.getStringExtra("chucnang");
-                        if (chucnang.equals("themmon")) {
-                            if (ktra) {
-                                HienThiDSMon();
+                        boolean check = intent.getBooleanExtra("check", false);
+                        String function = intent.getStringExtra("function");
+                        if (function.equals("addDrink")) {
+                            if (check) {
+                                showDrinkList();
                                 Toast.makeText(getActivity(), "Thêm thành công", Toast.LENGTH_SHORT).show();
                             } else {
                                 Toast.makeText(getActivity(), "Thêm thất bại", Toast.LENGTH_SHORT).show();
                             }
                         } else {
-                            if (ktra) {
-                                HienThiDSMon();
+                            if (check) {
+                                showDrinkList();
                                 Toast.makeText(getActivity(), "Sửa thành công", Toast.LENGTH_SHORT).show();
                             } else {
                                 Toast.makeText(getActivity(), "Sửa thất bại", Toast.LENGTH_SHORT).show();
@@ -80,21 +80,21 @@ public class DisplayMenuFragment extends Fragment {
 
         Bundle bundle = getArguments();
         if (bundle != null) {
-            maloai = bundle.getInt("maloai");
-            tenloai = bundle.getString("tenloai");
-            maban = bundle.getInt("maban");
-            HienThiDSMon();
+            categoryId = bundle.getInt("categoryId");
+            categoryName = bundle.getString("categoryName");
+            tableId = bundle.getInt("tableId");
+            showDrinkList();
 
             gvDisplayMenu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     // nếu lấy đc mã bàn mới mở
-                    tinhtrang = drinkDTOList.get(position).getStatus();
-                    if (maban != 0) {
-                        if (tinhtrang.equals("true")) {
+                    status = drinkDTOList.get(position).getStatus();
+                    if (tableId != 0) {
+                        if (status.equals("true")) {
                             Intent iAmount = new Intent(getActivity(), AmountMenuActivity.class);
-                            iAmount.putExtra("maban", maban);
-                            iAmount.putExtra("mamon", drinkDTOList.get(position).getDrinkID());
+                            iAmount.putExtra("tableId", tableId);
+                            iAmount.putExtra("drinkId", drinkDTOList.get(position).getDrinkID());
                             startActivity(iAmount);
                         } else {
                             Toast.makeText(getActivity(), "Món đã hết, không thể thêm", Toast.LENGTH_SHORT).show();
@@ -109,7 +109,7 @@ public class DisplayMenuFragment extends Fragment {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (event.getAction() == KeyEvent.ACTION_DOWN) {
-                    getParentFragmentManager().popBackStack("hienthiloai", FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    getParentFragmentManager().popBackStack("showCategory", FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 }
                 return false;
             }
@@ -130,22 +130,22 @@ public class DisplayMenuFragment extends Fragment {
     public boolean onContextItemSelected(MenuItem item) {
         int id = item.getItemId();
         AdapterView.AdapterContextMenuInfo menuInfo = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-        int vitri = menuInfo.position;
-        int mamon = drinkDTOList.get(vitri).getDrinkID();
+        int position = menuInfo.position;
+        int drinkId = drinkDTOList.get(position).getDrinkID();
 
         switch (id) {
             case R.id.itEdit:
                 Intent iEdit = new Intent(getActivity(), AddMenuActivity.class);
-                iEdit.putExtra("mamon", mamon);
-                iEdit.putExtra("maLoai", maloai);
-                iEdit.putExtra("tenLoai", tenloai);
+                iEdit.putExtra("drinkId", drinkId);
+                iEdit.putExtra("categoryId", categoryId);
+                iEdit.putExtra("categoryName", categoryName);
                 resultLauncherMenu.launch(iEdit);
                 break;
 
             case R.id.itDelete:
-                boolean ktra = drinkDAO.deleteDrink(mamon);
-                if (ktra) {
-                    HienThiDSMon();
+                boolean check = drinkDAO.deleteDrink(drinkId);
+                if (check) {
+                    showDrinkList();
                     Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.delete_sucessful),
                             Toast.LENGTH_SHORT).show();
                 } else {
@@ -171,16 +171,16 @@ public class DisplayMenuFragment extends Fragment {
         switch (id) {
             case R.id.itAddMenu:
                 Intent intent = new Intent(getActivity(), AddMenuActivity.class);
-                intent.putExtra("maLoai", maloai);
-                intent.putExtra("tenLoai", tenloai);
+                intent.putExtra("categoryId", categoryId);
+                intent.putExtra("categoryName", categoryName);
                 resultLauncherMenu.launch(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    private void HienThiDSMon() {
-        drinkDTOList = drinkDAO.getListDrinkByCategoryId(maloai);
+    private void showDrinkList() {
+        drinkDTOList = drinkDAO.getListDrinkByCategoryId(categoryId);
         adapterDisplayMenu = new AdapterDisplayMenu(getActivity(), R.layout.custom_layout_displaymenu, drinkDTOList);
         gvDisplayMenu.setAdapter(adapterDisplayMenu);
         adapterDisplayMenu.notifyDataSetChanged();

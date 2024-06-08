@@ -56,11 +56,11 @@ public class DisplayStatisticFragment extends Fragment {
                 totalamount = orderDTOS.get(position).getTotalAmount();
 
                 Intent intent = new Intent(getActivity(), DetailStatisticActivity.class);
-                intent.putExtra("orderid",orderid);
-                intent.putExtra("employeeid",employeeid);
-                intent.putExtra("tableid",tableid);
-                intent.putExtra("orderdate",orderdate);
-                intent.putExtra("totalamount",totalamount);
+                intent.putExtra("orderId",orderid);
+                intent.putExtra("employeeId",employeeid);
+                intent.putExtra("tableId",tableid);
+                intent.putExtra("orderDate",orderdate);
+                intent.putExtra("totalAmount",totalamount);
                 startActivity(intent);
             }
         });

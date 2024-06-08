@@ -36,7 +36,7 @@ public class AddTableActivity extends AppCompatActivity {
                     //trả về result cho displaytable
                     Intent intent = new Intent();
                     //Todo: rename check later, if no error occurs
-                    intent.putExtra("ketquathem",check);
+                    intent.putExtra("addResult",check);
                     setResult(RESULT_OK,intent);
                     finish();
                 }

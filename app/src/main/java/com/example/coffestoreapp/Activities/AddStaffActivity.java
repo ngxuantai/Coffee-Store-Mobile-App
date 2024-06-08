@@ -70,7 +70,7 @@ public class AddStaffActivity extends AppCompatActivity implements View.OnClickL
         employeeDAO = new EmployeeDAO(this);
 
         //region Hiển thị trang sửa nếu được chọn từ context menu sửa
-        staffID = getIntent().getIntExtra("manv",0);   //lấy manv từ display staff
+        staffID = getIntent().getIntExtra("employeeId",0);   //lấy manv từ display staff
         if(staffID != 0){
             TXT_addstaff_title.setText("Sửa nhân viên");
             EmployeeDTO employeeDTO = employeeDAO.getEmployeeById(staffID);
@@ -116,7 +116,7 @@ public class AddStaffActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        String chucnang;
+        String function;
         switch (id){
             case R.id.btn_addstaff_addStaff:
                 if( !validateAge() | !validateEmail() | !validateFullName() | !validateGender() | !validatePassWord() |
@@ -156,15 +156,15 @@ public class AddStaffActivity extends AppCompatActivity implements View.OnClickL
 
                 if(staffID != 0){
                     check = employeeDAO.editEmployee(employeeDTO,staffID);
-                    chucnang = "sua";
+                    function = "editEmployee";
                 }else {
                     check = employeeDAO.addEmployee(employeeDTO);
-                    chucnang = "themnv";
+                    function = "addEmployee";
                 }
                 //Thêm, sửa nv dựa theo obj employeeDTO
                 Intent intent = new Intent();
-                intent.putExtra("ketquaktra",check);
-                intent.putExtra("chucnang",chucnang);
+                intent.putExtra("check",check);
+                intent.putExtra("function",function);
                 setResult(RESULT_OK,intent);
                 finish();
                 break;

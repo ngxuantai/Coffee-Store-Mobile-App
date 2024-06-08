@@ -14,10 +14,10 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-//import com.example.coffestoreapp.Activities.AddCategoryActivity;
+import com.example.coffestoreapp.Activities.AddCategoryActivity;
 import com.example.coffestoreapp.Activities.HomeActivity;
-//import com.example.coffestoreapp.CustomAdapter.AdapterRecycleViewCategory;
-//import com.example.coffestoreapp.CustomAdapter.AdapterRecycleViewStatistic;
+import com.example.coffestoreapp.CustomAdapter.AdapterRecycleViewCategory;
+import com.example.coffestoreapp.CustomAdapter.AdapterRecycleViewStatistic;
 import com.example.coffestoreapp.DAO.OrderDAO;
 import com.example.coffestoreapp.DAO.CategoryDAO;
 import com.example.coffestoreapp.DTO.OrderDTO;
@@ -29,11 +29,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link DisplayHomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class DisplayHomeFragment extends Fragment implements View.OnClickListener {
     RecyclerView rcv_displayhome_Category, rcv_displayhome_OrderInDay;
     RelativeLayout layout_displayhome_Statistic, layout_displayhome_ViewTable, layout_displayhome_ViewMenu, layout_displayhome_ViewEmployee;
@@ -42,8 +37,8 @@ public class DisplayHomeFragment extends Fragment implements View.OnClickListene
     OrderDAO orderDAO;
     List<CategoryDTO> categoryDTOList;
     List<OrderDTO> orderDTOList;
-//    AdapterRecycleViewCategory adapterRecycleViewCategory;
-//    AdapterRecycleViewStatistic adapterRecycleViewStatistic;
+    AdapterRecycleViewCategory adapterRecycleViewCategory;
+    AdapterRecycleViewStatistic adapterRecycleViewStatistic;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -73,7 +68,7 @@ public class DisplayHomeFragment extends Fragment implements View.OnClickListene
         layout_displayhome_ViewMenu.setOnClickListener(this);
         layout_displayhome_ViewEmployee.setOnClickListener(this);
         txt_displayhome_ViewAllCategory.setOnClickListener(this);
-        txt_displayhome_ViewAllCategory.setOnClickListener(this);
+        txt_displayhome_ViewAllStatistic.setOnClickListener(this);
 
         return view;
     }
@@ -82,9 +77,9 @@ public class DisplayHomeFragment extends Fragment implements View.OnClickListene
         rcv_displayhome_Category.setHasFixedSize(true);
         rcv_displayhome_Category.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         categoryDTOList = categoryDAO.getListCategory();
-//        adapterRecycleViewCategory = new AdapterRecycleViewCategory(getActivity(),R.layout.custom_layout_displaycategory,loaiMonDTOList);
-//        rcv_displayhome_LoaiMon.setAdapter(adapterRecycleViewCategory);
-//        adapterRecycleViewCategory.notifyDataSetChanged();
+        adapterRecycleViewCategory = new AdapterRecycleViewCategory(getActivity(),R.layout.custom_layout_displaycategory, categoryDTOList);
+        rcv_displayhome_Category.setAdapter(adapterRecycleViewCategory);
+        adapterRecycleViewCategory.notifyDataSetChanged();
     }
 
     private void ShowOrderInDay(){
@@ -95,9 +90,9 @@ public class DisplayHomeFragment extends Fragment implements View.OnClickListene
         String orderDate = dateFormat.format(calendar.getTime());
 
         orderDTOList = orderDAO.getListOrderByDate(orderDate);
-//        adapterRecycleViewStatistic = new AdapterRecycleViewStatistic(getActivity(),R.layout.custom_layout_displaystatistic,donDatDTOS);
-//        rcv_displayhome_DonTrongNgay.setAdapter(adapterRecycleViewStatistic);
-//        adapterRecycleViewCategory.notifyDataSetChanged();
+        adapterRecycleViewStatistic = new AdapterRecycleViewStatistic(getActivity(),R.layout.custom_layout_displaystatistic, orderDTOList);
+        rcv_displayhome_OrderInDay.setAdapter(adapterRecycleViewStatistic);
+        adapterRecycleViewCategory.notifyDataSetChanged();
     }
 
     @Override
@@ -109,7 +104,7 @@ public class DisplayHomeFragment extends Fragment implements View.OnClickListene
             case R.id.layout_displayhome_Statistic:
             case R.id.txt_displayhome_ViewAllStatistic:
                 FragmentTransaction tranDisplayStatistic = getActivity().getSupportFragmentManager().beginTransaction();
-                //tranDisplayStatistic.replace(R.id.contentView, new DisplayStatisticFragment);
+                tranDisplayStatistic.replace(R.id.contentView, new DisplayStatisticFragment());
                 tranDisplayStatistic.addToBackStack(null);
                 tranDisplayStatistic.commit();
                 navigationView.setCheckedItem(R.id.nav_statistic);
@@ -118,7 +113,7 @@ public class DisplayHomeFragment extends Fragment implements View.OnClickListene
 
             case R.id.layout_displayhome_ViewTable:
                 FragmentTransaction tranDisplayTable = getActivity().getSupportFragmentManager().beginTransaction();
-                //tranDisplayTable.replace(R.id.contentView,new DisplayTableFragment());
+                tranDisplayTable.replace(R.id.contentView,new DisplayTableFragment());
                 tranDisplayTable.addToBackStack(null);
                 tranDisplayTable.commit();
                 navigationView.setCheckedItem(R.id.nav_table);
@@ -126,9 +121,9 @@ public class DisplayHomeFragment extends Fragment implements View.OnClickListene
                 break;
 
             case R.id.layout_displayhome_ViewMenu:
-//                Intent iAddCategory = new Intent(getActivity(), AddCategoryActivity.class);
-//                startActivity(iAddCategory);
-//                navigationView.setCheckedItem(R.id.nav_category);
+                Intent iAddCategory = new Intent(getActivity(), AddCategoryActivity.class);
+                startActivity(iAddCategory);
+                navigationView.setCheckedItem(R.id.nav_category);
 
                 break;
 
@@ -137,17 +132,19 @@ public class DisplayHomeFragment extends Fragment implements View.OnClickListene
                 if(homeAct.getAccessId() == 1)
                 {
                     FragmentTransaction tranDisplayStaff= getActivity().getSupportFragmentManager().beginTransaction();
-                    //tranDisplayStaff.replace(R.id.contentView,new DisplayStaffFragment());
+                    tranDisplayStaff.replace(R.id.contentView,new DisplayStaffFragment());
                     tranDisplayStaff.addToBackStack(null);
                     tranDisplayStaff.commit();
                     navigationView.setCheckedItem(R.id.nav_staff);
+                } else {
+                    Toast.makeText(getActivity(),"Bạn không có quyền truy cập",Toast.LENGTH_SHORT).show();
                 }
 
                 break;
 
             case R.id.txt_displayhome_ViewAllCategory:
                 FragmentTransaction tranDisplayCategory = getActivity().getSupportFragmentManager().beginTransaction();
-                //tranDisplayCategory.replace(R.id.contentView,new DisplayCategoryFragment());
+                tranDisplayCategory.replace(R.id.contentView,new DisplayCategoryFragment());
                 tranDisplayCategory.addToBackStack(null);
                 tranDisplayCategory.commit();
                 navigationView.setCheckedItem(R.id.nav_category);
