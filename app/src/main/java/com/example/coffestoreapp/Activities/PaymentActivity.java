@@ -94,6 +94,7 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
                     ShowPayment();
                     TXT_payment_total.setText("0 VNĐ");
                     Toast.makeText(getApplicationContext(),"Thanh toán thành công!",Toast.LENGTH_SHORT);
+                    finish();
                 }else{
                     Toast.makeText(getApplicationContext(),"Lỗi thanh toán!",Toast.LENGTH_SHORT);
                 }

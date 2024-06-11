@@ -64,6 +64,7 @@ public class AmountMenuActivity extends AppCompatActivity {
                     if (checkUpdate) {
                         Toast.makeText(getApplicationContext(), getResources().getString(R.string.add_sucessful),
                                 Toast.LENGTH_SHORT).show();
+                        finish();
                     } else {
                         Toast.makeText(getApplicationContext(), getResources().getString(R.string.add_failed),
                                 Toast.LENGTH_SHORT).show();
@@ -80,6 +81,7 @@ public class AmountMenuActivity extends AppCompatActivity {
                     if (checkAdd) {
                         Toast.makeText(getApplicationContext(), getResources().getString(R.string.add_sucessful),
                                 Toast.LENGTH_SHORT).show();
+                        finish();
                     } else {
                         Toast.makeText(getApplicationContext(), getResources().getString(R.string.add_failed),
                                 Toast.LENGTH_SHORT).show();

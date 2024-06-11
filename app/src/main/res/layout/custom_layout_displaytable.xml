@@ -35,14 +35,13 @@
         android:id="@+id/img_customtable_callOrder"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@drawable/ic_baseline_fastfood_24"
+        android:layout_below="@id/img_customtable_table"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
         android:background="@drawable/border_radius"
         android:padding="8dp"
-        android:layout_below="@id/img_customtable_table"
-        android:layout_marginTop="16dp"
-        android:layout_alignParentStart="true"
-        android:visibility="invisible"
-        />
+        android:src="@drawable/ic_baseline_fastfood_24"
+        android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/img_customtable_pay"

@@ -67,8 +67,8 @@ public class AdapterDisplayStaff extends BaseAdapter {
 
         viewHolder.txt_customstaff_staffName.setText(employeeDTO.getFullName());
         viewHolder.txt_customstaff_role.setText(roleDAO.getRoleById(employeeDTO.getRoleId()));
-        viewHolder.txt_customstaff_phoneNumber.setText(employeeDTO.getPhoneNumber());
-        viewHolder.txt_customstaff_Email.setText(employeeDTO.getEmail());
+        viewHolder.txt_customstaff_phoneNumber.setText("Sđt: " + employeeDTO.getPhoneNumber());
+        viewHolder.txt_customstaff_Email.setText("Email: " + employeeDTO.getEmail());
 
         return view;
     }

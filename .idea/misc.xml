@@ -19,14 +19,25 @@
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/font/banger.xml" value="0.2833333333333333" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/font/muli.xml" value="0.2833333333333333" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/font/muli_black.xml" value="0.494140625" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout-v28/custom_layout_displaycategory.xml" value="0.253125" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/about_layout.xml" value="0.22826086956521738" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/addcategory_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/addmenu_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/amount_menu_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/content_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/custom_layout_displaycategory.xml" value="0.25416666666666665" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/custom_layout_displaymenu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/custom_layout_displaystaff.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/custom_layout_displaystatistic.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/custom_layout_displaytable.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/detailstatistic_layout.xml" value="0.264" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/displaycategory_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/displayhome_layout.xml" value="0.264" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/displaymenu_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/displaystaff_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/displaystatistic_layout.xml" value="0.11302083333333333" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/displaytable_layout.xml" value="0.11302083333333333" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/edittable_layout.xml" value="0.11302083333333333" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/fragment_first.xml" value="0.25" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/home_layout.xml" value="0.20425724637681159" />
@@ -36,6 +47,9 @@
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/register_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/welcom_layout.xml" value="0.253125" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/layout/welcome_layout.xml" value="0.25" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/menu/edit_context_menu.xml" value="0.11302083333333333" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/menu/item_menu.xml" value="0.11302083333333333" />
+        <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/menu/main_menu_navigation.xml" value="0.11302083333333333" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/menu/menu_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Project_Git/Java/CoffeStore/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2215" />
       </map>
